@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, json, url_for, redirect, send_from_directory
 import os
-from keras.models import load_model
-#from flaskext.mysql  import MySQL
+#from keras.models import load_model
 app = Flask(__name__)
 #app = Flask(__name__, static_url_path='/static')
 UPLOAD_FOLDER = os.path.basename('uploads')
@@ -37,11 +36,11 @@ def retry():
     return render_template('index.html', init=False)
 
 
-def load_model():
-    loaded_model = load_model('nuovarete1.h5')
-    loaded_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-    score = loaded_model.evaluate_generator(test_generator)
-    return("%s: %.2f%%" % (loaded_model.metrics_names[1], score[1]*100))
+#def load_model():
+#    loaded_model = load_model('nuovarete1.h5')
+#    loaded_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+#    score = loaded_model.evaluate_generator(test_generator)
+#    return("%s: %.2f%%" % (loaded_model.metrics_names[1], score[1]*100))
 
 if __name__=="__main__":
     app.run()
