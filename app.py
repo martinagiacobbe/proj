@@ -38,9 +38,7 @@ def retry():
 
 #def load_model():
 #    loaded_model = load_model('nuovarete1.h5')
-#    loaded_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-#    score = loaded_model.evaluate_generator(test_generator)
-#    return("%s: %.2f%%" % (loaded_model.metrics_names[1], score[1]*100))
+#    probability = loaded_model.predict()
 
 if __name__=="__main__":
     app.run()
