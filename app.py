@@ -4,13 +4,10 @@ import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import shutil
 from keras.models import load_model
-import pylab as pl
 import numpy as np
-from PIL import Image
 from keras.preprocessing.image import img_to_array, load_img
 import cv2
 import keras
-import mpld3
 from keras import backend as K
 app = Flask(__name__)
 #app = Flask(__name__, static_url_path='/static')
@@ -48,17 +45,17 @@ def button(pic):
     sizes = [1.0-prob[0,0],prob[0,0]]
     colors = ['#ff9999','#66b3ff']
 
-    fig1, ax1 = plt.subplots()
-    ax1.pie(sizes, colors = colors, labels=labels, autopct='%1.1f%%', startangle=90)
-    centre_circle = plt.Circle((0,0),0.70,fc='white')
-    fig = plt.gcf()
-    fig.gca().add_artist(centre_circle)
-    ax1.axis('equal')
-    plt.tight_layout()
+    #fig1, ax1 = plt.subplots()
+    #ax1.pie(sizes, colors = colors, labels=labels, autopct='%1.1f%%', startangle=90)
+    #centre_circle = plt.Circle((0,0),0.70,fc='white')
+    #fig = plt.gcf()
+    #fig.gca().add_artist(centre_circle)
+    #ax1.axis('equal')
+    #plt.tight_layout()
     #plt.show()
-    fig1.savefig('static/results/'+pic)
-    mpld3.fig_to_html(fig)
-    return render_template('index.html', pics=pics, pic=pic, init=False, thepred=True, prob=prob,cls=cls, url ='/static/results/'+pic)
+    #fig1.savefig('static/results/'+pic)
+    #mpld3.fig_to_html(fig)
+    return render_template('index.html', pics=pics, pic=pic, init=False, thepred=True, prob=prob,cls=cls) #url ='/static/results/'+pic)
 
 
 if __name__=="__main__":
