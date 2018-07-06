@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, json, url_for, redirect, send_from_directory
 import os
-import matplotlib.image as mpimg
-import matplotlib.pyplot as plt
+#import matplotlib.image as mpimg
+#import matplotlib.pyplot as plt
 import shutil
 from keras.models import load_model
 import numpy as np
