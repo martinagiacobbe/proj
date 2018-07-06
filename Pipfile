@@ -2,6 +2,15 @@
 gunicorn = "*"
 flask = "*"
 requests = "*"
+keras='*'
+cv2='*'
+mdlp3='*'
+numpy='*'
+PIL='*'
+os='*'
+matplotlib='*'
+shutil='*'
+pylab='*'
 
 [requires]
 python_version = "2.7"
