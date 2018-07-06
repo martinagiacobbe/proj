@@ -12,6 +12,12 @@
                                 height: 100%;
                                 line-height: 1.8;
                             }
+                        
+                        figure {
+                            display: inline-block;
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
                         /* Full height image header */
                         
                         .bgimg-1 {
@@ -24,6 +30,11 @@
                             padding: 16px;
                         }
                         </style>
+                        <style type="text/css">
+                        /* Chart.js */
+                        @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
+                        </style>
+                        
                         <body>
                             <!-- Navbar (sit on top) -->
                             <div class="w3-top">
@@ -32,7 +43,7 @@
                                     <!-- Right-sided navbar links -->
                                     <div class="w3-right w3-hide-small">
                                         <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-hand-o-up"></i> ABOUT</a>
-                                        <a href="#descr" class="w3-bar-item w3-button"><i class="fa fa-file-text-o"></i> DESCRIPTION</a>
+                                        <a href="#descr" class="w3-bar-item w3-button"><i class="fa fa-file-text-o"></i> LEARN MORE</a>
                                         <a href="#load" class="w3-bar-item w3-button"><i class="fa fa-spinner"></i> LOAD</a>
                                         <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
                                     </div>
@@ -52,13 +63,11 @@
                                 <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
                             </nav>
                             
-                            <!-- Header with full-height image -->
+                           Header with full-height image
       
                             
                             <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
                                 <div class="w3-display-left w3-text-white" style="padding:48px">
-                                    <p><a href="#descr" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a></p>
-                                <p><a href="#load" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Start!</a></p>
                                 </div>
                                 <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
                                 </div>
@@ -66,13 +75,15 @@
                             
                             <center><span class="w3-large">Online predictions of tuberculosis (TB) disease.</span> <br>
                                 <i class="fa fa-heartbeat"></i> <br>
-                                <span class="w3-jumbo w3-hide-small">Medical helpers</span> </center>
+                                <span class="w3-jumbo w3-hide-small">MEDICAL HELPERS</span> </center>
 
                             <!-- About Section -->
                             <div class="w3-container" style="padding:128px 16px" id="about">
                                 <h3 class="w3-center">ABOUT THE APP</h3>
-                                <p class="w3-center w3-large">Follow the step</p>
+                                
                                 <div class="w3-row-padding w3-center" style="margin-top:64px">
+                                    
+                                   <!--
                                     <div class="w3-quarter" style="margin:40px">
                                         <i class="fa fa-file-image-o w3-margin-bottom w3-jumbo w3-center"></i>
                                         <p class="w3-large"> Image </p>
@@ -87,7 +98,57 @@
                                         <i class="fa fa-user-md w3-margin-bottom w3-jumbo"></i>
                                         <p class="w3-large">Support</p>
                                         <p>At the end, the app provides support to a medical diagnosis.</p>
+                                    </div> -->
+                                    
+                                    <div align='center' width='80%'>
+                                        <table width='80%'>
+                                            
+                                            <tr>
+                                                <td width='33%'>
+                                                    <div  align='center' style="padding-right: 60px; padding-left: 60px">
+                                                        <i class="fa fa-file-image-o w3-margin-bottom w3-jumbo w3-center"></i>                                                    </div>
+                                                </td>
+                                                <td width='33%'>
+                                                    <div  align='center' style="padding-right: 60px; padding-left: 60px">
+                                                        <i class="fa fa-spinner w3-margin-bottom w3-jumbo"></i>
+
+                                                    </div>
+                                                </td>
+                                                <td width='33%'>
+                                                    <div  align='center' style="padding-right: 60px; padding-left: 60px">
+                                                        <i class="fa fa-user-md w3-margin-bottom w3-jumbo"></i>
+                                                    </div>
+                                                </td>
+                                                
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td width='33%' style='vertical-align:top !important'>
+                                                    <div align='center' style="padding-right: 60px; padding-left: 60px">
+                                                        <p class="w3-large"> Image </p>
+                                                        <p>Choose a chest x-ray image.</p>
+                                                    </div>
+                                                </td>
+                                                <td width='33%' style='vertical-align:top !important'>   
+                                                    <div  align='center' style="padding-right: 60px; padding-left: 60px">
+                                                        <p class="w3-large">Load</p>
+                                                        <p>Load the image and wait the response.</p>
+                                                    </div>
+                                                </td>
+                                                <td width='33%' style='vertical-align:top !important'>  
+                                                    <div  align='center' style="padding-right: 60px; padding-left: 60px">
+                                                        <p class="w3-large">Support</p>
+                                                        <p>At the end, the app provides support to a medical diagnosis.</p>
+                                                    </div>
+                                                </td>
+                                                
+                                            </tr>
+                                        </table>
                                     </div>
+                                    
+                                    
+                                    
+                                    
                                 </div>
                             </div>
                             
@@ -99,11 +160,12 @@
                                         <p>Tuberculosis is an infectious disease that kills almost two million people worldwide each year (this makes it the number one cause of death from an infectious disease!) even though the disease can be identified on a simple chest X-ray and treated with antibiotics.<br>
                                             The idea of combining artificial
                                         intelligence and human diagnosis could work well in developing countries, where an automated method could interpret most cases and only the ambiguous cases would be sent to a radiologist.</br>
-                                        An example of TB diagnosis
+                                        An example of TB diagnosis and worldwide cases of fatality ratio can be seen below.
                                         </p>
 
                                     </div>
                                     <div>
+
                                         <img class="w3-image w3-round-large" src="{{ url_for('static', filename="diagnosis.jpg")}}" width="30%" height="40%" style="margin:50px">
 
                                         <img class="w3-image w3-round-large" src="{{ url_for('static', filename="ep.jpg")}}" width="50%" height="50%" style="margin:50px">
@@ -111,40 +173,96 @@
                                     </div>
                                     <p>For more general information about TB, symptoms, causes, risk factors, transmission or other click the button "More info", otherwise pass to "Try it now".
                                     </p>
-                                    <p><a href="#load" class="w3-button w3-black"> Try it now</a> <a href="#load" class="w3-button w3-black"> More info</a></p>
+                                    <p><a href="#load" class="w3-button w3-black"> Try it now</a> <a href="https://en.wikipedia.org/wiki/Tuberculosis" class="w3-button w3-black"> More info</a></p>
                                 </div>
                             </div>
                             
                             
-                            <!-- Work Section -->
+                            <!-- Work -->
                             <div class="w3-container" style="padding:128px 16px" id="load">
                                 <h3 class="w3-center">LOAD</h3>
                                 <p class="w3-center w3-large">Load here your image</p>
                                 <header class="navbar">
-                                    <form action="/upload" method="post" enctype="multipart/form-data" >
-                                        <span class="btn btn-default btn-file">
-                                            <input type="file" name="image">
-                                                </span>
+                                <center>
+                                    {% for pic in pics %}
+                                    
+                                    <figure>
                                         
-                                        <input type="submit" value="Upload your image" class="btn btn-primary">
-                                            </form>
+                                        <a href="{{ url_for('uploaded_file', pic=pic) }}"><img src='/static/gallery/{{pic}}' width='150' height='150' ></a>
+                                        {% if pic.endswith('1.png') %}
+
+                                            <figcaption> TB case </figcaption>
+                                            {% endif %}
+                                            {% if pic.endswith('0.png') %}
+                                            
+                                            <figcaption> normal case </figcaption>
+                                            {% endif %}
+                                            
+                                            
+                                        
+                                    </figure>
+                                    
+                                    {% endfor %}
+                                    
+                                    </center>
+                                    
                                     
                                     <div class="text-center">
-                                        
-                                        <p> </p>
+                                        <center>
                                         {% if init %}
-                                        <br><img src="{{ url_for('send_file', filename=filename) }}" width="500"><br><br>
-                                            <form action="/retry" method="get"> <!-- or method="post" -->
-                                                <input type="submit" value="Retry" >
-                                                    </form>
-                                            
-                                            <p> </p>
+                                        <img src='/static/gallery/{{pic}}' width='305' height='305' >
+                                        </center>
+                                        <br>
+                                        <center>
+                                            <a href="{{ url_for('button', pic=pic) }}"><button type="button">Make the prediction</button></a>
                                             {% endif %}
-                                            </div>
+                                        </center>
+                                            <br>
+                                            {% if thepred %}
+                                            <center>
+                                                <img src='/static/gallery/{{pic}}' width='305' height='305' >
+                                            </center>
+                                            <br>
+                                            <center>
+                                                <a href="{{ url_for('button', pic=pic) }}"><button type="button">Make the prediction</button></a>
+                                            </center>
+                                            <br>
+                                            <h3 class="w3-center">PREDICTION</h3>
+                                            <br>
+                                            <center>
+                                            <img src={{url}} height="420" width="480">
+                                             {% endif %}
+                                             </center>
+                                            <br>
+                                                </div>
                                     
                                 
                                 </header>
                                 
+                                <!-- Viz -->
+                                <script>
+                                //doughnut
+                                var ctxD = document.getElementById("doughnutChart").getContext('2d');
+                                var myLineChart = new Chart(ctxD, {
+                                type: 'doughnut',
+                                data: {
+                                labels: ["Nude", "Non Nude"],
+                                datasets: [
+                                {
+                                data: ['4.5', 100 - '4.5'],
+                                backgroundColor: ["#246D5F", "#dbe0e0"],
+                                hoverBackgroundColor: ["#246D5F", "#dbe0e0"]
+                                }
+                                ]
+                                },
+                                options: {
+                                responsive: true
+                                }
+                                });
+                                </script>
+
+
+
                             <!-- Modal for full size images on click-->
                             <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
                                 <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
@@ -189,5 +307,4 @@
                             <footer class="w3-center w3-black w3-padding-64">
                                 <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-home"></i> To the top</a>
                             </footer>
-                            
                             
