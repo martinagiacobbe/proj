@@ -2,6 +2,12 @@
 gunicorn = "*"
 flask = "*"
 requests = "*"
+keras='*'
+cv2='*'
+shutil='*'
+matplotlib='*'
+os='*'
+numpy='*'
 
 [requires]
 python_version = "2.7"
