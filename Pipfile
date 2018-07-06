@@ -3,11 +3,10 @@ gunicorn = "*"
 flask = "*"
 requests = "*"
 keras='*'
-cv2='*'
+opencv-contrib-python='*'
 shutil='*'
 matplotlib='*'
 numpy='*'
-os='*'
 
 [requires]
 python_version = "3.6"
