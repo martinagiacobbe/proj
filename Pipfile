@@ -4,7 +4,6 @@ flask = "*"
 requests = "*"
 keras='*'
 opencv-contrib-python='*'
-shutil='*'
 matplotlib='*'
 numpy='*'
 
