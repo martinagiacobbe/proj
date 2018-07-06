@@ -13,4 +13,4 @@ shutil='*'
 pylab='*'
 
 [requires]
-python_full_version = "2.7.15"
+python_version = "2.7"
