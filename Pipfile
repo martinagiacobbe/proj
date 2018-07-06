@@ -6,7 +6,6 @@ keras='*'
 cv2='*'
 shutil='*'
 matplotlib='*'
-os='*'
 numpy='*'
 
 [requires]
