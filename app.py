@@ -55,10 +55,10 @@ def bokeh_plt(pic, sizes, labels):
             start_angle=cumsum('angle', include_zero=True), end_angle=cumsum('angle'),
             line_color="white", fill_color='color', legend='type', source=data)
                
-   p.axis.axis_label=None
-   p.axis.visible=False
-   p.grid.grid_line_color = None
-   return p
+    p.axis.axis_label=None
+    p.axis.visible=False
+    p.grid.grid_line_color = None
+    return p
 
 
 
