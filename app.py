@@ -34,9 +34,10 @@ def uploaded_file(pic):
 #@app.route('/test/<pic>', methods=['GET'])
 #def send_file(pic):
 #    return send_from_directory('static/gallery/', pic, cache_timeout=1)
+
 def bokeh_plt(pic, sizes, labels):
-    sizes=[int(round(sizes[0])*100),sizes[1]*100]
-    sizes=[sizes[0],1-sizes[0]]
+    sizes=[int(round(sizes[0]*100)),sizes[1]*100]
+    sizes=[sizes[0],100-sizes[0]]
     output_file("pie.html")
     dic=dict(zip(labels,sizes))
     x = Counter(dic)
