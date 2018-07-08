@@ -2,12 +2,11 @@
 gunicorn = "*"
 flask = "*"
 requests = "*"
-keras='*'
-opencv-contrib-python='*'
-matplotlib='*'
-numpy='*'
-tensorflow='*'
-pandas=‘*’
+keras="*"
+opencv-contrib-python="*"
+numpy="*"
+tensorflow="*"
+pandas="*"
 
 [requires]
 python_version = "2.7"
