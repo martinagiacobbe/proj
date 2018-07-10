@@ -29,7 +29,8 @@ def main():
 def uploaded_file(pic):
     pics = os.listdir('static/gallery/')
     #shutil.copy('static/gallery/'+pic,TEST_FOLDER)
-    return render_template('index.html',pics=pics, pic=pic, init=True,thepred=False)
+    
+    return render_template('index.html', _anchor="load", controllo_load="load", pics=pics, pic=pic, init=True,thepred=False)
 
 #@app.route('/test/<pic>', methods=['GET'])
 #def send_file(pic):
@@ -37,7 +38,9 @@ def uploaded_file(pic):
 
 def bokeh_plt(pic, sizes, labels):
     sizes=[int(round(sizes[0]*100)),sizes[1]*100]
+    print(sizes)
     sizes=[sizes[0],100-sizes[0]]
+    print(sizes)
     output_file("pie.html")
     dic=dict(zip(labels,sizes))
     x = Counter(dic)
@@ -52,19 +55,20 @@ def bokeh_plt(pic, sizes, labels):
     data['value']=data['value']+['%']*len(data['value'])
     p = figure(plot_height=350, toolbar_location=None,
                tools="hover", tooltips="@type: @value")
-    p.wedge(x=0, y=1, radius=0.4,
-            start_angle=cumsum('angle', include_zero=True), end_angle=cumsum('angle'),
-            line_color="white", fill_color='color', legend='type', source=data)
+               p.wedge(x=0, y=1, radius=0.4,
+                       start_angle=cumsum('angle', include_zero=True), end_angle=cumsum('angle'),
+                       line_color="white", fill_color='color', legend='type', source=data)
                
-    p.axis.axis_label=None
-    p.axis.visible=False
-    p.grid.grid_line_color = None
-    return p
+               p.axis.axis_label=None
+               p.axis.visible=False
+               p.grid.grid_line_color = None
+               return p
 
 
 
 @app.route('/show/<pic>/button')
 def button(pic):
+    pics = os.listdir('static/gallery/')
     K.clear_session()
     pics = os.listdir('static/gallery/')
     path='static/gallery/'+pic
@@ -76,26 +80,12 @@ def button(pic):
     loaded_model = load_model('nuovarete1.h5')
     cls = loaded_model.predict_classes(inputarray)
     prob=loaded_model.predict_proba(inputarray)
-    explode = (0.05,0.05)
     labels = ['HEALTHY', 'ILL']
     sizes = [1.0-prob[0,0],prob[0,0]]
+    print(sizes)
     p=bokeh_plt(pic,sizes,labels)
     script, div = components(p)
-    
-    #colors = ['#ff9999','#66b3ff']
-    #fig1, ax1 = plt.subplots()
-    #ax1.pie(sizes, colors = colors, labels=labels, autopct='%1.1f%%', startangle=90)
-    #centre_circle = plt.Circle((0,0),0.70,fc='white')
-    #fig = plt.gcf()
-    #fig.gca().add_artist(centre_circle)
-    #ax1.axis('equal')
-    #plt.tight_layout()
-    #plt.show()
-    #fig1.savefig('static/results/'+pic)
-    #mpld3.fig_to_html(fig)
-    return render_template('index.html', pics=pics, pic=pic, init=False, thepred=True, prob=prob,cls=cls, script=script, div=div)# url ='/static/results/'+pic)
-
+    return render_template('index.html', _anchor='pred', pics=pics, pic=pic, init=False, thepred='pred', prob=prob, cls=cls, script=script, div=div)
 
 if __name__=="__main__":
     app.run()
-

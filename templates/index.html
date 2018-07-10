@@ -23,12 +23,22 @@
                             
                             .bgimg-1 {
                                 background-position: center;
-                                background-image: url('../static/rad22.jpg');
-                                min-height: 77%;
+                                background-image: url('../static/nuova-500.jpg');
+                                min-height: 85%;
                                 background-repeat-y: no-repeat;
                             }
                             .w3-bar .w3-button {
                                 padding: 16px;
+                            }
+                            
+                            .titletex
+                            {
+                                font-family:    Chalkduster, fantasy;
+                                font-size:      20px;
+                                font-weight:    500;
+                                font-style: normal;
+                                font-variant: normal;
+                                
                             }
                             </style>
                             
@@ -76,32 +86,17 @@
             </div>
         </header>
         
-        <center><span class="w3-large">Online predictions of tuberculosis (TB) disease.</span> <br>
-            <i class="fa fa-heartbeat"></i> <br>
-            <span class="w3-jumbo w3-hide-small">MEDICAL HELPERS</span> </center>
-        
+        <center>
+            <div class="titletex">
+                <span class="w3-jumbo w3-hide-small">MEDICAL HELPERS</span> </div>
+            <i class="fa fa-heartbeat"></i> <br>
+            <span class="w3-large">Online predictions of tuberculosis (TB) disease.</span> <br>
+        </center>
         <!-- About Section -->
         <div class="w3-container" style="padding:128px 16px" id="about">
             <h3 class="w3-center">ABOUT THE APP</h3>
             
             <div class="w3-row-padding w3-center" style="margin-top:64px">
-                
-                <!--
-                 <div class="w3-quarter" style="margin:40px">
-                 <i class="fa fa-file-image-o w3-margin-bottom w3-jumbo w3-center"></i>
-                 <p class="w3-large"> Image </p>
-                 <p>Choose a chest x-ray image.</p>
-                 </div>
-                 <div class="w3-quarter" style="margin:40px">
-                 <i class="fa fa-spinner w3-margin-bottom w3-jumbo"></i>
-                 <p class="w3-large">Load</p>
-                 <p>Load the image and wait the response.</p>
-                 </div>
-                 <div class="w3-quarter" style="margin:40px">
-                 <i class="fa fa-user-md w3-margin-bottom w3-jumbo"></i>
-                 <p class="w3-large">Support</p>
-                 <p>At the end, the app provides support to a medical diagnosis.</p>
-                 </div> -->
                 
                 <div align='center' width='80%'>
                     <table width='80%'>
@@ -176,13 +171,38 @@
                             </div>
                 <p>For more general information about TB, symptoms, causes, risk factors, transmission or other click the button "More info", otherwise pass to "Try it now".
                 </p>
-                <p><a href="#load" class="w3-button w3-black"> Try it now</a> <a href="https://en.wikipedia.org/wiki/Tuberculosis" class="w3-button w3-black"> More info</a></p>
+                <p><a href="#load" class="w3-button w3-black w3-round"> Try it now</a> <a href="https://en.wikipedia.org/wiki/Tuberculosis" class="w3-button w3-black w3-round"> More info</a></p>
+            </div>
+        </div>
+        
+        <!-- Promo Section - "We know design" -->
+        <div class="w3-container w3-light-grey" style="padding:128px 16px" id="descr">
+            <div class="w3-row-padding">
+                <div class="w3-col m6" style="width:100%">
+                    <h3 class="w3-center">BRIEF DESCRIPTION</h3>
+                    <p>
+                    </p>
+                    
+                </div>
+                <div>
+                    
+                    <img class="w3-image w3-round-large" src="{{ url_for('static', filename="diagnosis.jpg")}}" width="30%" height="40%" style="margin:50px">
+                        
+                        <img class="w3-image w3-round-large" src="{{ url_for('static', filename="ep.jpg")}}" width="50%" height="50%" style="margin:50px">
+                            
+                            </div>
+                <p>For more general information about TB, symptoms, causes, risk factors, transmission or other click the button "More info", otherwise pass to "Try it now".
+                </p>
+                <p><a href="#load" class="w3-button w3-black w3-round"> Try it now</a> <a href="https://en.wikipedia.org/wiki/Tuberculosis" class="w3-button w3-black w3-round"> More info</a></p>
             </div>
         </div>
         
         
+        
         <!-- Work -->
         <div class="w3-container" style="padding:128px 16px" id="load">
+            <script> document.location.hash="#"+"{{controllo_load}}"
+                </script>
             <h3 class="w3-center">LOAD</h3>
             <p class="w3-center w3-large">Load here your image</p>
             <header class="navbar">
@@ -217,7 +237,7 @@
                             </center>
                     <br>
                     <center>
-                        <a href="{{ url_for('button', pic=pic) }}"><button type="button">Make the prediction</button></a>
+                        <a href="{{ url_for('button', pic=pic) }}"><button type="button" class="w3-button w3-black w3-round">Make the prediction</button></a>
                         {% endif %}
                     </center>
                     <br>
@@ -227,10 +247,12 @@
                             </center>
                     <br>
                     <center>
-                        <a href="#load">  <a href="{{ url_for('button', pic=pic) }}"><button type="button">Make the prediction</button></a></a>
+                        <a href="{{ url_for('button', pic=pic) }}"><button type="button">Make the prediction</button></a>
                     </center>
                     <br>
-                    <h3 class="w3-center">PREDICTION</h3>
+                    <h3 class="w3-center" id='pred'>PREDICTION</h3>
+                    <script> document.location.hash="#"+"{{thepred}}"
+                        </script>
                     <br>
                     <center>
                         <div class=page>
@@ -290,8 +312,7 @@
             
             <!-- Footer -->
             <footer class="w3-center w3-black w3-padding-64">
-                <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-home"></i> To the top</a>
+                <a href="#home" class="w3-button w3-light-grey w3-round"><i class="fa fa-home"></i> To the top</a>
             </footer>
             
             
-
