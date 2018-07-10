@@ -55,14 +55,14 @@ def bokeh_plt(pic, sizes, labels):
     data['value']=data['value']+['%']*len(data['value'])
     p = figure(plot_height=350, toolbar_location=None,
                tools="hover", tooltips="@type: @value")
-               p.wedge(x=0, y=1, radius=0.4,
-                       start_angle=cumsum('angle', include_zero=True), end_angle=cumsum('angle'),
-                       line_color="white", fill_color='color', legend='type', source=data)
+    p.wedge(x=0, y=1, radius=0.4,
+                start_angle=cumsum('angle', include_zero=True), end_angle=cumsum('angle'),
+                line_color="white", fill_color='color', legend='type', source=data)
                
-               p.axis.axis_label=None
-               p.axis.visible=False
-               p.grid.grid_line_color = None
-               return p
+    p.axis.axis_label=None
+    p.axis.visible=False
+    p.grid.grid_line_color = None
+    return p
 
 
 
