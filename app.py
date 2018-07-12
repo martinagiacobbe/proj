@@ -44,21 +44,21 @@ def bokeh_plt(pic, sizes, labels):
     output_file("pie.html")
     dic=dict(zip(labels,sizes))
     x = Counter(dic)
-    
+
     data = pd.DataFrame.from_dict(dict(x), orient='index').reset_index().rename(index=str, columns={0:'value', 'index':'type'})
-    
+
     data['angle'] = data['value']/sum(x.values()) * 2*pi
     data['color'] = [Category20c[len(x)+15][13]]+[Category20c[len(x)+8][2]]
     print(data)
-    
+
     data['value'] = data['value'].astype('str')
     data['value']=data['value']+['%']*len(data['value'])
     p = figure(plot_height=350, toolbar_location=None,
                tools="hover", tooltips="@type: @value")
     p.wedge(x=0, y=1, radius=0.4,
-                start_angle=cumsum('angle', include_zero=True), end_angle=cumsum('angle'),
-                line_color="white", fill_color='color', legend='type', source=data)
-               
+            start_angle=cumsum('angle', include_zero=True), end_angle=cumsum('angle'),
+            line_color="white", fill_color='color', legend='type', source=data)
+
     p.axis.axis_label=None
     p.axis.visible=False
     p.grid.grid_line_color = None
@@ -82,10 +82,13 @@ def button(pic):
     prob=loaded_model.predict_proba(inputarray)
     labels = ['HEALTHY', 'ILL']
     sizes = [1.0-prob[0,0],prob[0,0]]
+    pro0=int(round(sizes[0]*100))
+    pro1=str(100-pro0)+'%'
+    pro0=str(pro0)+'%'
     print(sizes)
     p=bokeh_plt(pic,sizes,labels)
     script, div = components(p)
-    return render_template('index.html', _anchor='pred', pics=pics, pic=pic, init=False, thepred='pred', prob=prob, cls=cls, script=script, div=div)
+    return render_template('index.html', _anchor='pred', pics=pics, pic=pic, init=False, thepred='pred', prob=prob, cls=cls, script=script, div=div, pro0=pro0, pro1=pro1)
 
 if __name__=="__main__":
     app.run()

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <!DOCTYPE html>
-    <html>
-        <title>W3.CSS Template</title>
-        <head>
-            <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Medical helpers</title>
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                    <link href="https://fonts.googleapis.com/css?family=Zeyada" rel="stylesheet">
                         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                                 <style>
@@ -35,11 +34,9 @@
                                 
                                 .titletex
                                 {
-                                    font-family:    Chalkduster, fantasy;
-                                    font-size:      20px;
-                                    font-weight:    500;
-                                    font-style: normal;
-                                    font-variant: normal;
+                                    font-family: 'Zeyada';
+                                    font-size:      30;
+                                    font-weight:    800;
                                     
                                 }
                                 </style>
@@ -49,276 +46,309 @@
                                 {{ script | safe }}
                                 
                                 </head>
-        
-        <body>
-            <br>
-            <br>
-            <div class="w3-display-container w3-animate-opacity">
-                <img <img src="{{ url_for('static', filename="nuova-500.jpg")}}" alt="Milan" style="width:100%;min-height:100%;max-height:100%;"> </div>
-            <!-- Navbar (sit on top) -->
-            <div class="w3-top">
-                <div class="w3-bar w3-white w3-card" id="myNavbar">
-                    <a href="#home" class="w3-bar-item w3-button w3-wide"> <i class="fa fa-home"></i> </a>
-                    <!-- Right-sided navbar links -->
-                    <div class="w3-right w3-hide-small">
-                        <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-hand-o-up"></i> ABOUT</a>
-                        <a href="#descr" class="w3-bar-item w3-button"><i class="fa fa-file-text-o"></i> LEARN MORE</a>
-                        <a href="#load" class="w3-bar-item w3-button"><i class="fa fa-spinner"></i> LOAD</a>
-                        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-                    </div>
-                    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-                    
-                    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-                        <i class="fa fa-bars"></i>
-                    </a>
+    
+    <body>
+        <br>
+        <br>
+        <div class="w3-display-container w3-animate-opacity">
+            <img <img src="{{ url_for('static', filename="nuova-600.jpg")}}" alt="Milan" style="width:100%;min-height:100%;max-height:100%;"> </div>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+                <a href="#home" class="w3-bar-item w3-button w3-wide"> <i class="fa fa-home"></i> </a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small">
+                    <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-hand-o-up"></i> APP</a>
+                    <a href="#descr" class="w3-bar-item w3-button"><i class="fa fa-file-text-o"></i> ABOUT TB</a>
+                    <a href="#model" class="w3-bar-item w3-button"><i class="fa fa-area-chart"></i> MODEL</a>
+                    <a href="#load" class="w3-bar-item w3-button"><i class="fa fa-spinner"></i> TRY</a>
+                    <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
                 </div>
-            </div>
-            
-            <!-- Sidebar on small screens when clicking the menu icon -->
-            <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-                <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-                <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-                <a href="#load" onclick="w3_close()" class="w3-bar-item w3-button">LOAD</a>
-                <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-            </nav>
-            
-            
-            
-            <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-                <div class="w3-display-left w3-text-white" style="padding:48px">
-                </div>
-                <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-                </div>
-            </header>
-            
-            <center>
-                <div class="titletex">
-                    <span class="w3-jumbo w3-hide-small">MEDICAL HELPERS</span> </div>
-                <i class="fa fa-heartbeat"></i> <br>
-                <span class="w3-large">Online predictions of tuberculosis (TB) disease.</span> <br>
-            </center>
-            <!-- About Section -->
-            <div class="w3-container" style="padding:128px 16px" id="about">
-                <h3 class="w3-center">ABOUT THE APP</h3>
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
                 
-                <div class="w3-row-padding w3-center" style="margin-top:64px">
-                    
-                    <div align='center' width='80%'>
-                        <table width='80%'>
-                            
-                            <tr>
-                                <td width='33%'>
-                                    <div  align='center' style="padding-right: 60px; padding-left: 60px">
-                                        <i class="fa fa-file-image-o w3-margin-bottom w3-jumbo w3-center"></i>                                                    </div>
-                                </td>
-                                <td width='33%'>
-                                    <div  align='center' style="padding-right: 60px; padding-left: 60px">
-                                        <i class="fa fa-spinner w3-margin-bottom w3-jumbo"></i>
-                                        
-                                    </div>
-                                </td>
-                                <td width='33%'>
-                                    <div  align='center' style="padding-right: 60px; padding-left: 60px">
-                                        <i class="fa fa-user-md w3-margin-bottom w3-jumbo"></i>
-                                    </div>
-                                </td>
-                                
-                            </tr>
-                            
-                            <tr>
-                                <td width='33%' style='vertical-align:top !important'>
-                                    <div align='center' style="padding-right: 60px; padding-left: 60px">
-                                        <p class="w3-large"> Image </p>
-                                        <p>Choose a chest x-ray image.</p>
-                                    </div>
-                                </td>
-                                <td width='33%' style='vertical-align:top !important'>
-                                    <div  align='center' style="padding-right: 60px; padding-left: 60px">
-                                        <p class="w3-large">Load</p>
-                                        <p>Load the image and wait the response.</p>
-                                    </div>
-                                </td>
-                                <td width='33%' style='vertical-align:top !important'>
-                                    <div  align='center' style="padding-right: 60px; padding-left: 60px">
-                                        <p class="w3-large">Support</p>
-                                        <p>At the end, the app provides support to a medical diagnosis.</p>
-                                    </div>
-                                </td>
-                                
-                            </tr>
-                        </table>
-                    </div>
-                    
-                    
-                    
-                    
-                </div>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
+        </div>
+        
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+            <a href="#load" onclick="w3_close()" class="w3-bar-item w3-button">LOAD</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+        </nav>
+        
+        
+        
+        <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+            <div class="w3-display-left w3-text-white" style="padding:48px">
+            </div>
+            <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+            </div>
+        </header>
+        
+        <center>
+            <div class="titletex">
+                <span class="w3-jumbo w3-hide-small"> MEDICAL HELPERS</span> </div>
+            <i class="fa fa-heartbeat"></i> <br>
+            <span class="w3-large">Online predictions of tuberculosis (TB) disease.</span> <br>
             
-            <!-- Promo Section - "We know design" -->
-            <div class="w3-container w3-light-grey" style="padding:128px 16px" id="descr">
-                <div class="w3-row-padding">
-                    <div class="w3-col m6" style="width:100%">
-                        <h3 class="w3-center">BRIEF DESCRIPTION</h3>
-                        <p>Tuberculosis is an infectious disease that kills almost two million people worldwide each year (this makes it the number one cause of death from an infectious disease!) even though the disease can be identified on a simple chest X-ray and treated with antibiotics.<br>
-                        The idea of combining artificial
-                        intelligence and human diagnosis could work well in developing countries, where an automated method could interpret most cases and only the ambiguous cases would be sent to a radiologist.</br>
-                        An example of TB diagnosis and worldwide cases of fatality ratio can be seen below.
-                        </p>
+            
+        </center>
+        <!-- About Section -->
+        <div class="w3-container" style="padding:128px 16px" id="about">
+            <h3 class="w3-center">ABOUT THE APP</h3>
+            
+            <div class="w3-row-padding w3-center" style="margin-top:64px">
+                
+                <div align='center' width='80%'>
+                    <table width='80%'>
                         
-                    </div>
-                    <div>
-                        
-                        <img class="w3-image w3-round-large" src="{{ url_for('static', filename="diagnosis.jpg")}}" width="30%" height="40%" style="margin:50px">
-                            
-                            <img class="w3-image w3-round-large" src="{{ url_for('static', filename="ep.jpg")}}" width="50%" height="50%" style="margin:50px">
-                                
+                        <tr>
+                            <td width='33%'>
+                                <div  align='center' style="padding-right: 60px; padding-left: 60px">
+                                    <i class="fa fa-file-image-o w3-margin-bottom w3-jumbo w3-center"></i>                                                    </div>
+                            </td>
+                            <td width='33%'>
+                                <div  align='center' style="padding-right: 60px; padding-left: 60px">
+                                    <i class="fa fa-spinner w3-margin-bottom w3-jumbo"></i>
+                                    
                                 </div>
-                    <p>For more general information about TB, symptoms, causes, risk factors, transmission or other click the button "More info", otherwise pass to "Try it now".
-                    </p>
-                    <p><a href="#load" class="w3-button w3-black w3-round"> Try it now</a> <a href="https://en.wikipedia.org/wiki/Tuberculosis" class="w3-button w3-black w3-round"> More info</a></p>
-                </div>
-            </div>
-            
-            <!-- Promo Section - "We know design" -->
-            <div class="w3-container w3-light-grey" style="padding:128px 16px" id="descr">
-                <div class="w3-row-padding">
-                    <div class="w3-col m6" style="width:100%">
-                        <h3 class="w3-center">BRIEF DESCRIPTION</h3>
-                        <p>
-                        </p>
-                        
-                    </div>
-                    <div>
-                        
-                        <img class="w3-image w3-round-large" src="{{ url_for('static', filename="diagnosis.jpg")}}" width="30%" height="40%" style="margin:50px">
-                            
-                            <img class="w3-image w3-round-large" src="{{ url_for('static', filename="ep.jpg")}}" width="50%" height="50%" style="margin:50px">
-                                
+                            </td>
+                            <td width='33%'>
+                                <div  align='center' style="padding-right: 60px; padding-left: 60px">
+                                    <i class="fa fa-user-md w3-margin-bottom w3-jumbo"></i>
                                 </div>
-                    <p>For more general information about TB, symptoms, causes, risk factors, transmission or other click the button "More info", otherwise pass to "Try it now".
-                    </p>
-                    <p><a href="#load" class="w3-button w3-black w3-round"> Try it now</a> <a href="https://en.wikipedia.org/wiki/Tuberculosis" class="w3-button w3-black w3-round"> More info</a></p>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td width='33%' style='vertical-align:top !important'>
+                                <div align='center' style="padding-right: 60px; padding-left: 60px">
+                                    <p class="w3-large"> Image </p>
+                                    <p>Choose a chest x-ray image.</p>
+                                </div>
+                            </td>
+                            <td width='33%' style='vertical-align:top !important'>
+                                <div  align='center' style="padding-right: 60px; padding-left: 60px">
+                                    <p class="w3-large">Load</p>
+                                    <p>Load the image and wait the response.</p>
+                                </div>
+                            </td>
+                            <td width='33%' style='vertical-align:top !important'>
+                                <div  align='center' style="padding-right: 60px; padding-left: 60px">
+                                    <p class="w3-large">Support</p>
+                                    <p>At the end, the app provides support to a medical diagnosis.</p>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                    </table>
                 </div>
+                
+                
+                
+                
             </div>
-            
-            
-            
-            <!-- Work -->
-            <div class="w3-container" style="padding:128px 16px" id="load">
-                <script> document.location.hash="#"+"{{controllo_load}}"
-                    </script>
-                <h3 class="w3-center">LOAD</h3>
-                <p class="w3-center w3-large">Load here your image</p>
-                <header class="navbar">
+        </div>
+        
+        <!-- Description -->
+        <div class="w3-container w3-light-grey" style="padding:128px 16px" id="descr">
+            <div class="w3-row-padding">
+                <div class="w3-col m6" style="width:100%">
+                    <h3 class="w3-center">BRIEF DESCRIPTION</h3>
+                    <p>Tuberculosis is an infectious disease that kills almost two million people worldwide each year (this makes it the number one cause of death from an infectious disease!) even though the disease can be identified on a simple chest X-ray and treated with antibiotics.<br>
+                    The idea of combining artificial
+                    intelligence and human diagnosis could work well in developing countries, where an automated method could interpret most cases and only the ambiguous cases would be sent to a radiologist.</br>
+                    An example of TB diagnosis and worldwide cases of fatality ratio can be seen below.
+                    </p>
+                    
+                </div>
+                <div>
+                    
+                    <img class="w3-image w3-round-large" src="{{ url_for('static', filename="diagnosis.jpg")}}" width="30%" height="40%" style="margin:50px">
+                        
+                        <img class="w3-image w3-round-large" src="{{ url_for('static', filename="ep.jpg")}}" width="50%" height="50%" style="margin:50px">
+                            
+                            </div>
+                
+                <p>For more general information about TB, symptoms, causes, risk factors, transmission or other click the button "More info", otherwise pass to "Try it now".
+                </p>
+                <p><a href="#load" class="w3-button w3-black w3-round"> Try it now</a> <a href="https://en.wikipedia.org/wiki/Tuberculosis" class="w3-button w3-black w3-round"> More info</a></p>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Model -->
+        
+        <div class="w3-container" style="padding:128px 16px" id="model">
+            <div class="w3-row-padding">
+                <div class="w3-col m6" style="width:100%">
+                    
+                    <h3 class="w3-center">MODEL</h3>
+                    <p> Convolutional Neural Networks are a functional way to solve most of Image Recognition problems. The main concept is that these algorithms are inspired on the structure of our brain.<br>
+                    In fact the visual cortex processes images in layers of increasing complexity. The first layers distinguish basic attributes like lines and curves. At higher levels, the brain is able to recognizes more complex configuration as edge or colors. In a similar fashion, Convolutional Neural Networks process images using a matrix of weights called filters and they are able to recognize more complex attributes going progressively into the layers. <br>
+                    The architecture of the network is the following, as we can see:
+                    <ul>
+                        
+                        
+                        <li>Convolutional Layer - used to detect features </li>
+                        <li>Non linearity Layer - reduces the number of weights and controls overfitting </li>
+                        <li>Flattening Layer - prepares the data for a Classical Neural Network </li>
+                        <li>Fully-Connected Layer - concluses with the classification </li>
+                    </ul>
+                    
+                    </p>
                     <center>
-                        {% for pic in pics %}
-                        
                         <figure>
-                            
-                            <a href="{{ url_for('uploaded_file', pic=pic) }}"><img src='/static/gallery/{{pic}}' width='150' height='150' ></a>
-                            {% if pic.endswith('1.png') %}
-                            
-                            <figcaption> TB case </figcaption>
-                            {% endif %}
-                            {% if pic.endswith('0.png') %}
-                            
-                            <figcaption> normal case </figcaption>
-                            {% endif %}
-                            
-                            
-                            
-                        </figure>
-                        
-                        {% endfor %}
-                        
+                            <img src='/static/Tnkq3Tf.png' width='650' height='250' >
+                                
+                                <figcaption> <b> Figure 1</b>: CNN architecture </figcaption>
+                                
+                                </figure>
                     </center>
                     
-                    
-                    <div class="text-center">
-                        <center>
-                            {% if init %}
-                            <img src='/static/gallery/{{pic}}' width='305' height='305' >
-                                </center>
-                        <br>
-                        <center>
-                            <a href="{{ url_for('button', pic=pic) }}"><button type="button" class="w3-button w3-black w3-round">Make the prediction</button></a>
-                            {% endif %}
-                        </center>
-                        <br>
-                        {% if thepred %}
-                        <center>
-                            <img src='/static/gallery/{{pic}}' width='305' height='305' >
-                                </center>
-                        <br>
-                        <center>
-                            <a href="{{ url_for('button', pic=pic) }}"><button type="button">Make the prediction</button></a>
-                        </center>
-                        <br>
-                        <h3 class="w3-center" id='pred'>PREDICTION</h3>
-                        <script> document.location.hash="#"+"{{thepred}}"
-                            </script>
-                        <br>
-                        <center>
-                            <div class=page>
-                                {{ div | safe }}
-                            </div>
-                            {% endif %}
-                        </center>
-                        <br>
-                    </div>
-                    
-                    
-                </header>
-                
-                <!-- Viz -->
-                
-                
-                
-                <!-- Modal for full size images on click-->
-                <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-                    <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-                    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-                        <img id="img01" class="w3-image">
-                            <p id="caption" class="w3-opacity w3-large"></p>
-                            </div>
                 </div>
-                
-                
-                <!-- Contact Section -->
-                <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-                    <h3 class="w3-center">CONTACT</h3>
-                    <p class="w3-center w3-large">For more information, send me and email</p>
-                    <div class="w3-row-padding" style="margin-top:64px">
-                        <div class="w3-half">
-                            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Milan, IT</p>
-                            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: martinagiacobbe@gmail.com</p>
+            </div>
+        </div>
+        
+        
+        
+        
+        <!-- Work -->
+        <div class="w3-container w3-light-grey" style="padding:128px 16px" id="descr">
+            <div class="w3-row-padding">
+                <div class="w3-col m6" style="width:100%">
+                    
+                    <script> document.location.hash="#"+"{{controllo_load}}"
+                        </script>
+                    <h3 class="w3-center">CHOOSE AN IMAGE</h3>
+                    <center><p class="w3-large"> Choose an image and click on the botton below for having an online prediction of the disease. </p> </center>
+                    <header class="navbar">
+                        <center>
+                            
+                            {% for pic in pics %}
+                            
+                            <figure>
+                                
+                                <a href="{{ url_for('uploaded_file', pic=pic) }}"><img src='/static/gallery/{{pic}}' width='150' height='150' ></a>
+                                {% if pic.endswith('1.png') %}
+                                
+                                <figcaption> TB case </figcaption>
+                                {% endif %}
+                                {% if pic.endswith('0.png') %}
+                                
+                                <figcaption> normal case </figcaption>
+                                {% endif %}
+                                
+                                
+                                
+                            </figure>
+                            
+                            {% endfor %}
+                            
+                        </center>
+                        
+                        
+                        <div class="text-center">
+                            <center>
+                                {% if init %}
+                                <img src='/static/gallery/{{pic}}' width='305' height='305' >
+                                    </center>
+                            <br>
+                            <center>
+                                <a href="{{ url_for('button', pic=pic) }}"><button type="button" class="w3-button w3-black w3-round">Make the prediction</button></a>
+                                {% endif %}
+                            </center>
+                            <br>
+                            {% if thepred %}
+                            <center>
+                                <img src='/static/gallery/{{pic}}' width='305' height='305' >
+                                    </center>
+                            <br>
+                            <center>
+                                <a href="{{ url_for('button', pic=pic) }}"><button type="button">Make the prediction</button></a>
+                            </center>
                             <br>
                         </div>
-                    </div>
-                </div>
-                
-                <div id="id01" class="w3-modal">
-                    <div class="w3-modal-content w3-card-4 w3-animate-top">
-                        <header class="w3-container w3-teal w3-display-container">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
-                            <h4>Oh snap! We just showed you a modal..</h4>
-                            <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-                        </header>
-                        <div class="w3-container">
-                            <p>Cool huh? Ok, enough teasing around..</p>
-                            <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
                         </div>
-                        <footer class="w3-container w3-teal">
-                            <p>Modal footer</p>
-                        </footer>
+            </div>
+        </div>
+        
+        <div class="w3-container" style="padding:128px 16px" id="pred">
+            <div class="w3-row-padding">
+                <div class="w3-col m6" style="width:100%">
+                    
+                    <h3 class="w3-center">PREDICTION</h3>
+                    <p align='center'> The probabilities of ... <p>
+                    <table align='center'>
+                        <tr>
+                            <td>
+                                <p> being healthy: </td>
+                            <td style="padding-left: 20px">
+                                <p style="color:#9e9ac9">{{pro0}}  </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 20px; vertical-align:top">
+                                being ill:
+                            </td>
+                            <td style="padding-left: 20px; vertical-align:top; color:#9dcae1" >
+                                {{pro1}}
+                            </td>
+                        </tr>
+                    </table>
+                    <script> document.location.hash="#"+"{{thepred}}"
+                        </script>
+                    <br>
+                    <center>
+                        <div class=page>
+                            {{ div | safe }}
+                        </div>
+                        {% endif %}
+                    </center>
+                    <br>
+                </div>
+            </div>
+        </div>
+        
+        
+        </header>
+        
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+            <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                    <p id="caption" class="w3-opacity w3-large"></p>
                     </div>
+        </div>
+        
+        
+        <!-- Contact Section -->
+        <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+            <h3 class="w3-center">CONTACT</h3>
+            <p class="w3-center w3-large">For more information, send me an email</p>
+            <div class="w3-row-padding" style="margin-top:64px">
+                
+                <div class="w3-half">
+                    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Milan, IT</p>
+                    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: martinagiacobbe@gmail.com</p>
+                    <br>
+                    
                 </div>
                 
-                <!-- Footer -->
-                <footer class="w3-center w3-black w3-padding-64">
-                    <a href="#home" class="w3-button w3-light-grey w3-round"><i class="fa fa-home"></i> To the top</a>
-                </footer>
-                
-                
-
+            </div>
+        </div>
+        
+        
+        
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-64">
+            <a href="#home" class="w3-button w3-light-grey w3-round"><i class="fa fa-home"></i> To the top</a>
+        </footer>
+        
+        
