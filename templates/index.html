@@ -35,7 +35,7 @@
                                 .titletex
                                 {
                                     font-family: 'Zeyada';
-                                    font-size:      30;
+                                    font-size:      90;
                                     font-weight:    800;
                                     
                                 }
@@ -91,7 +91,7 @@
         
         <center>
             <div class="titletex">
-                <span class="w3-jumbo w3-hide-small"> MEDICAL HELPERS</span> </div>
+                <span class="w3-hide-small" style="font-size:90px !important"> MEDICAL HELPERS</span> </div>
             <i class="fa fa-heartbeat"></i> <br>
             <span class="w3-large">Online predictions of tuberculosis (TB) disease.</span> <br>
             
@@ -135,7 +135,7 @@
                             <td width='33%' style='vertical-align:top !important'>
                                 <div  align='center' style="padding-right: 60px; padding-left: 60px">
                                     <p class="w3-large">Load</p>
-                                    <p>Load the image and wait the response.</p>
+                                    <p>Wait the response of the selected image.</p>
                                 </div>
                             </td>
                             <td width='33%' style='vertical-align:top !important'>
@@ -168,16 +168,24 @@
                     
                 </div>
                 <div>
-                    
-                    <img class="w3-image w3-round-large" src="{{ url_for('static', filename="diagnosis.jpg")}}" width="30%" height="40%" style="margin:50px">
+                    <img class="w3-image w3-round-large" src="{{ url_for('static', filename="diagnosis.jpg")}}" width="30%" height="40%" style="margin-left:50px; margin-right:50px; margin-top:50px; margin-bottom:7px">
                         
-                        <img class="w3-image w3-round-large" src="{{ url_for('static', filename="ep.jpg")}}" width="50%" height="50%" style="margin:50px">
-                            
+                        <img class="w3-image w3-round-large" src="{{ url_for('static', filename="ep.jpg")}}" width="50%" height="50%" style="margin-left:50px; margin-right:50px; margin-top:50px; margin-bottom:10px">
+                            <table width="100%" style="vertical-align:center">
+                                <tr>
+                                    <td width="50%">
+                                        <p style="padding-left:80px; vertical-align:top"><b>Figure 1</b>: Example of TB diagnosis</p>
+                                    </td>
+                                    <td width="50%">
+                                        <p style=" vertical-align:top; padding-left:15px"><b>Figure 2</b>: Worldwide cases of fatality ratio</p></p>
+                                    </td>
+                                </tr>
+                            </table>
                             </div>
                 
                 <p>For more general information about TB, symptoms, causes, risk factors, transmission or other click the button "More info", otherwise pass to "Try it now".
                 </p>
-                <p><a href="#load" class="w3-button w3-black w3-round"> Try it now</a> <a href="https://en.wikipedia.org/wiki/Tuberculosis" class="w3-button w3-black w3-round"> More info</a></p>
+                <center> <p><a href="#load" class="w3-button w3-black w3-round"> Try it now</a> <a href="https://en.wikipedia.org/wiki/Tuberculosis" class="w3-button w3-black w3-round"> More info</a></p> </center>
             </div>
         </div>
         </div>
@@ -191,7 +199,7 @@
                     <h3 class="w3-center">MODEL</h3>
                     <p> Convolutional Neural Networks are a functional way to solve most of Image Recognition problems. The main concept is that these algorithms are inspired on the structure of our brain.<br>
                     In fact the visual cortex processes images in layers of increasing complexity. The first layers distinguish basic attributes like lines and curves. At higher levels, the brain is able to recognizes more complex configuration as edge or colors. In a similar fashion, Convolutional Neural Networks process images using a matrix of weights called filters and they are able to recognize more complex attributes going progressively into the layers. <br>
-                    The architecture of the network is the following:
+                    The architecture of the network is the following, as we can see:
                     <ul>
                         
                         
@@ -206,7 +214,7 @@
                         <figure>
                             <img src='/static/Tnkq3Tf.png' width='650' height='250' >
                                 
-                                <figcaption> <b> Figure 1</b>: CNN architecture </figcaption>
+                                <figcaption> <b> Figure 3</b>: CNN architecture </figcaption>
                                 
                                 </figure>
                     </center>
@@ -219,7 +227,7 @@
         
         
         <!-- Work -->
-        <div class="w3-container w3-light-grey" style="padding:128px 16px" id="descr">
+        <div class="w3-container w3-light-grey" style="padding:128px 16px" id="load">
             <div class="w3-row-padding">
                 <div class="w3-col m6" style="width:100%">
                     
@@ -332,11 +340,10 @@
         <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
             <h3 class="w3-center">CONTACT</h3>
             <p class="w3-center w3-large">For more information, send me an email</p>
-            <div class="w3-row-padding" style="margin-top:64px">
-                
-                <div class="w3-half">
-                    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Milan, IT</p>
-                    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: martinagiacobbe@gmail.com</p>
+            <div class="w3-row-padding w3-center">
+                <div class="w3-center">
+                    <p><i class="fa fa-map-marker fa-fw w3-xxlarge"></i> Milan, IT</p>
+                    <p><i class="fa fa-envelope fa-fw w3-xxlarge"> </i> Email: martinagiacobbe@gmail.com</p>
                     <br>
                     
                 </div>
@@ -352,3 +359,4 @@
         </footer>
         
         
+
